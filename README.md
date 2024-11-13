@@ -47,4 +47,24 @@ Button(action: {
 }
 ```
 
+### Диагональный градиент
+```swift
+Button(action: {
+    print("Диагональный градиент")
+}) {
+    Text("Диагональный")
+        .font(.system(size: 18, weight: .semibold))
+        .foregroundColor(.white)
+        .frame(width: 300, height: 55)
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [Color.purple, Color.orange]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        )
+        .cornerRadius(28)
+}
+
+```
 -----
