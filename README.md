@@ -26,3 +26,25 @@ Button(action: {
         .cornerRadius(28)
 }
 ```
+
+### Вертикальный градиент
+```swift
+Button(action: {
+    print("Вертикальный градиент")
+}) {
+    Text("Вертикальный")
+        .font(.system(size: 18, weight: .semibold))
+        .foregroundColor(.white)
+        .frame(width: 300, height: 55)
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [Color.green, Color.yellow]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        )
+        .cornerRadius(28)
+}
+```
+
+-----
