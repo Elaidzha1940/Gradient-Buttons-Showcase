@@ -1,19 +1,20 @@
-⌨️ Gradient-Buttons-Showcase.
+⌨️ Gradient-Buttons-Showcase
 =====
 
-## Описание
-Этот проект демонстрирует, как создавать кнопки с градиентным фоном в **SwiftUI** и **UIKit**. Примеры включают горизонтальные, вертикальные и диагональные градиенты, а также настройку кнопки с градиентом в UIKit.
+## Description
+This project demonstrates how to create buttons with gradient backgrounds in SwiftUI and UIKit. Examples include horizontal, vertical, and diagonal gradients, as well as how to set up a gradient button in UIKit.
 
-## Примеры использования
+Usage Examples
+-----
 
-### SwiftUI Пример
+## SwiftUI Example
 
-#### Горизонтальный градиент
+#### Horizontal Gradient
 ```swift
 Button(action: {
-    print("Горизонтальный градиент")
+    print("Horizontal Gradient")
 }) {
-    Text("Горизонтальный")
+    Text("Horizontal")
         .font(.system(size: 18, weight: .semibold))
         .foregroundColor(.white)
         .frame(width: 300, height: 55)
@@ -26,14 +27,15 @@ Button(action: {
         )
         .cornerRadius(28)
 }
+
 ```
 
-### Вертикальный градиент
+### Vertical Gradient
 ```swift
 Button(action: {
-    print("Вертикальный градиент")
+    print("Vertical Gradient")
 }) {
-    Text("Вертикальный")
+    Text("Vertical")
         .font(.system(size: 18, weight: .semibold))
         .foregroundColor(.white)
         .frame(width: 300, height: 55)
@@ -48,12 +50,12 @@ Button(action: {
 }
 ```
 
-### Диагональный градиент
+### Diagonal Gradient
 ```swift
 Button(action: {
-    print("Диагональный градиент")
+    print("Diagonal Gradient")
 }) {
-    Text("Диагональный")
+    Text("Diagonal")
         .font(.system(size: 18, weight: .semibold))
         .foregroundColor(.white)
         .frame(width: 300, height: 55)
@@ -66,48 +68,49 @@ Button(action: {
         )
         .cornerRadius(28)
 }
-
 ```
+-----
 
-### UIKit Пример
 
-Создание кнопки с градиентом
+## UIKit Example
+
+### Creating a gradient button
 ```swift
 private func setupPromoButton() {
     let promoButton = UIButton(type: .system)
     
-    // Настройка текста кнопки
-    promoButton.setTitle("Кнопка", for: .normal)
-    promoButton.setTitleColor(.white, for: .normal)  // Белый цвет текста
+    // Setting the button title
+    promoButton.setTitle("Button", for: .normal)
+    promoButton.setTitleColor(.white, for: .normal)  // White text color
     promoButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
     
-    // Настройка фона кнопки
-    promoButton.backgroundColor = .clear  // Прозрачный фон
+    // Setting the background color
+    promoButton.backgroundColor = .clear  // Transparent background
     
-    // Настройка градиентного слоя
+    // Setting up the gradient layer
     let gradientLayer = CAGradientLayer()
     gradientLayer.colors = [
-        UIColor.white.withAlphaComponent(0.7).cgColor, // Белый с уменьшенной насыщенностью
-        UIColor.systemGreen.withAlphaComponent(0.8).cgColor, // Полупрозрачный зелёный
-        UIColor.systemGreen.cgColor // Полный зелёный
+        UIColor.white.withAlphaComponent(0.7).cgColor, // White with reduced opacity
+        UIColor.systemGreen.withAlphaComponent(0.8).cgColor, // Semi-transparent green
+        UIColor.systemGreen.cgColor // Full green
     ]
-    gradientLayer.locations = [0.0, 0.5, 1.0] // Плавный переход по центру
-    gradientLayer.startPoint = CGPoint(x: 0.5, y: 0) // Верхняя центральная точка
-    gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)   // Нижняя центральная точка
+    gradientLayer.locations = [0.0, 0.5, 1.0] // Smooth transition in the middle
+    gradientLayer.startPoint = CGPoint(x: 0.5, y: 0) // Top center point
+    gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)   // Bottom center point
     
-    // Убедимся, что градиент полностью покрывает кнопку
+    // Ensuring the gradient covers the button entirely
     gradientLayer.frame = CGRect(x: 0, y: 0, width: 300, height: 55)
-    gradientLayer.cornerRadius = 28 // Мягкие углы
+    gradientLayer.cornerRadius = 28 // Soft corners
 
-    // Добавляем градиентный слой на кнопку
+    // Adding the gradient layer to the button
     promoButton.layer.insertSublayer(gradientLayer, at: 0)
     promoButton.layer.cornerRadius = 28
     promoButton.clipsToBounds = true
     
-    // Добавление действия при нажатии
+    // Adding action when the button is tapped
     promoButton.addTarget(self, action: #selector(didTapPromoButton), for: .touchUpInside)
     
-    // Установка ограничений для кнопки
+    // Setting constraints for the button
     promoButton.translatesAutoresizingMaskIntoConstraints = false
     view.addSubview(promoButton)
     
@@ -121,12 +124,11 @@ private func setupPromoButton() {
 
 @objc func didTapPromoButton() {
     guard let url = URL(string: "") else {
-        print("Некорректный URL")
+        print("Invalid URL")
         return
     }
     UIApplication.shared.open(url, options: [:], completionHandler: nil)
 }
 ```
-
 
 -----
