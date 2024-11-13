@@ -77,7 +77,7 @@ private func setupPromoButton() {
     let promoButton = UIButton(type: .system)
     
     // Настройка текста кнопки
-    promoButton.setTitle("Создать бизнес", for: .normal)
+    promoButton.setTitle("Кнопка", for: .normal)
     promoButton.setTitleColor(.white, for: .normal)  // Белый цвет текста
     promoButton.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
     
@@ -120,7 +120,7 @@ private func setupPromoButton() {
 }
 
 @objc func didTapPromoButton() {
-    guard let url = URL(string: "https://app.finolog.ru/") else {
+    guard let url = URL(string: "") else {
         print("Некорректный URL")
         return
     }
