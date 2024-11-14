@@ -69,6 +69,7 @@ private func setupPromoButton(in view: UIView, title: String = "Create Business"
     let gradientLayer = CAGradientLayer()
     gradientLayer.colors = [
         UIColor.white.withAlphaComponent(0.7).cgColor, // Light white with reduced saturation
+        UIColor.green.withAlphaComponent(0.7).cgColor, // Light green with reduced saturation
         UIColor.systemGreen.cgColor // Full green color
     ]
     gradientLayer.locations = [0.0, 0.5, 1.0] // Smooth transition through the middle
