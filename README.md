@@ -9,82 +9,47 @@ Usage Examples
 
 ## SwiftUI Example
 
-1. Horizontal Gradient
 ```swift
-Button(action: {
-    print("Horizontal Gradient")
-}) {
-    Text("Horizontal")
-        .font(.system(size: 18, weight: .semibold))
-        .foregroundColor(.white)
-        .frame(width: 300, height: 55)
-        .background(
-            LinearGradient(
-                gradient: Gradient(colors: [Color.red, Color.blue]),
-                startPoint: .leading,
-                endPoint: .trailing
-            )
-        )
-        .cornerRadius(28)
-}
+import SwiftUI
 
-```
-
-2. Vertical Gradient
-```swift
-Button(action: {
-    print("Vertical Gradient")
-}) {
-    Text("Vertical")
-        .font(.system(size: 18, weight: .semibold))
-        .foregroundColor(.white)
-        .frame(width: 300, height: 55)
-        .background(
-            LinearGradient(
-                gradient: Gradient(colors: [Color.green, Color.yellow]),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-        )
-        .cornerRadius(28)
-}
-```
-
-3. Diagonal Gradient
-```swift
-Button(action: {
-    print("Diagonal Gradient")
-}) {
-    Text("Diagonal")
-        .font(.system(size: 18, weight: .semibold))
-        .foregroundColor(.white)
-        .frame(width: 300, height: 55)
-        .background(
-            LinearGradient(
-                gradient: Gradient(colors: [Color.purple, Color.orange]),
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-        )
-        .cornerRadius(28)
+struct PromoButtonView: View {
+    var title: String = "Create Business"
+    
+    var body: some View {
+        Button(action: {
+            // Handle button tap action
+            didTapPromoButton()
+        }) {
+            Text(title)
+                .font(.system(size: 18, weight: .semibold))
+                .foregroundColor(.white)
+                .padding()
+                .frame(width: 300, height: 55)
+                .background(
+                    LinearGradient(
+                        gradient: Gradient(colors: [
+                            Color.white.opacity(0.7),
+                            Color.green
+                        ]),
+                        startPoint: .leading,
+                        endPoint: .trailing
+                    )
+                )
+                .cornerRadius(28)
+        }
+    }
+    
+    // Example action method for the button
+    func didTapPromoButton() {
+        // Handle tap event
+        print("Promo button tapped!")
+    }
 }
 ```
 -----
 
 ## UIKit Example
 
-
-1. Horizontal Gradient
-```swift 
-
-```
-
-2. Vertical Gradient
-```swift
-
-```
-
-3. Diagonal Gradient
 ```swift
 
 ```
