@@ -9,7 +9,7 @@ Usage Examples
 
 ## SwiftUI Example
 
-#### Horizontal Gradient
+1. Horizontal Gradient
 ```swift
 Button(action: {
     print("Horizontal Gradient")
@@ -30,7 +30,7 @@ Button(action: {
 
 ```
 
-### Vertical Gradient
+2. Vertical Gradient
 ```swift
 Button(action: {
     print("Vertical Gradient")
@@ -50,7 +50,7 @@ Button(action: {
 }
 ```
 
-### Diagonal Gradient
+3. Diagonal Gradient
 ```swift
 Button(action: {
     print("Diagonal Gradient")
@@ -71,20 +71,23 @@ Button(action: {
 ```
 -----
 
-
 ## UIKit Example
 
-### Vertical Gradient
 
+1. Horizontal Gradient
+```swift 
+
+```
+
+2. Vertical Gradient
+```swift
+
+```
+
+3. Diagonal Gradient
 ```swift
 
 ```
 
 
-
-### Diagonal Gradient
-
-```swift
-
-```
 -----
