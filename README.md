@@ -4,9 +4,6 @@
 ## Description
 This project demonstrates how to create buttons with gradient backgrounds in SwiftUI and UIKit. Examples include horizontal, vertical, and diagonal gradients, as well as how to set up a gradient button in UIKit.
 
-Usage Examples
------
-
 ## SwiftUI Example
 
 ```swift
