@@ -46,6 +46,13 @@ struct PromoButtonView: View {
     }
 }
 ```
+
+# Example Usage:
+```swift
+// In your SwiftUI view, call the PromoButtonView to display the button
+PromoButtonView()
+    .padding(.bottom, 25)
+```
 -----
 
 ## UIKit Example
@@ -93,7 +100,7 @@ private func setupPromoButton(in view: UIView, title: String = "Create Business"
 }
 ```
 
-### Example Usage:
+# Example Usage:
 ```swift
 // In your view controller, call the function to add the button
 setupPromoButton(in: self.view)
