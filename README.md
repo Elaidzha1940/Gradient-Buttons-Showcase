@@ -25,8 +25,8 @@ struct PromoButtonView: View {
                 .background(
                     LinearGradient(
                         gradient: Gradient(colors: [
-                            Color.white.opacity(0.7),
-                            Color.green.opacity(0.7),
+                            Color.white.opacity(0.9),
+                            Color.green.opacity(0.9),
                             Color.green
                         ]),
                         startPoint: .top,
@@ -68,8 +68,8 @@ private func setupPromoButton(in view: UIView, title: String = "Create Business"
     // Setup the gradient layer
     let gradientLayer = CAGradientLayer()
     gradientLayer.colors = [
-        UIColor.white.withAlphaComponent(0.7).cgColor, // Light white with reduced saturation
-        UIColor.green.withAlphaComponent(0.7).cgColor, // Light green with reduced saturation
+        UIColor.white.withAlphaComponent(0.9).cgColor, // Light white with reduced saturation
+        UIColor.systemGreen.withAlphaComponent(0.9).cgColor, // Light green with reduced saturation
         UIColor.systemGreen.cgColor // Full green color
     ]
     gradientLayer.locations = [0.0, 0.5, 1.0] // Smooth transition through the middle
