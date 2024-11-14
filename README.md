@@ -26,10 +26,11 @@ struct PromoButtonView: View {
                     LinearGradient(
                         gradient: Gradient(colors: [
                             Color.white.opacity(0.7),
+                            Color.green.opacity(0.7),
                             Color.green
                         ]),
-                        startPoint: .leading,
-                        endPoint: .trailing
+                        startPoint: .top,
+                        endPoint: .bottom
                     )
                 )
                 .cornerRadius(28)
