@@ -1,10 +1,10 @@
 ⌨️ Gradient-Buttons-Showcase
 =====
 
-## Description
+### Description
 This project demonstrates how to create buttons with gradient backgrounds in SwiftUI and UIKit. Examples include horizontal, vertical, and diagonal gradients, as well as how to set up a gradient button in UIKit.
 
-## SwiftUI Example
+### SwiftUI Example
 
 ```swift
 import SwiftUI
@@ -44,7 +44,7 @@ struct PromoButtonView: View {
 }
 ```
 
-# Example Usage:
+### Example Usage:
 ```swift
 // In your SwiftUI view, call the PromoButtonView to display the button
 PromoButtonView()
@@ -52,7 +52,7 @@ PromoButtonView()
 ```
 -----
 
-## UIKit Example
+### UIKit Example
 
 ```swift
 private func setupPromoButton(in view: UIView, title: String = "Create Business", bottomOffset: CGFloat = -25) {
@@ -97,7 +97,7 @@ private func setupPromoButton(in view: UIView, title: String = "Create Business"
 }
 ```
 
-# Example Usage:
+### Example Usage:
 ```swift
 // In your view controller, call the function to add the button
 setupPromoButton(in: self.view)
