@@ -99,7 +99,7 @@ private func setupPromoButton(in view: UIView, title: String = "Create Business"
 }
 ```
 
-### Example Usage:
+#### Example Usage:
 ```swift
 // In your view controller, call the function to add the button
 setupPromoButton(in: self.view)
