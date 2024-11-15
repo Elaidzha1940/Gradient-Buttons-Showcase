@@ -45,7 +45,7 @@ struct PromoButtonView: View {
 }
 ```
 
-### Example Usage:
+#### Example Usage:
 ```swift
 // In your SwiftUI view, call the PromoButtonView to display the button
 PromoButtonView()
